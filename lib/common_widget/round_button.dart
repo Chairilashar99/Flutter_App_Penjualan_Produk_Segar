@@ -63,7 +63,7 @@ class RoundIconButton extends StatelessWidget {
             height: 20,
             fit: BoxFit.contain,
           ),
-          SizedBox(
+          const SizedBox(
             width: 30,
           ),
           Text(
