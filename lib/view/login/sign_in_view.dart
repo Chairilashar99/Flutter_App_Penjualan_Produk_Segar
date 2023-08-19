@@ -2,6 +2,7 @@ import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_project/common/color_extension.dart';
 import 'package:flutter_shop_project/common_widget/round_button.dart';
+import 'package:flutter_shop_project/view/login/verification_view.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -154,7 +155,13 @@ class _SignInViewState extends State<SignInView> {
                       title: "Continue with Google",
                       icon: "assets/img/google_logo.png",
                       bgColor: const Color(0xff5383EC),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const VerificationView()),
+                        );
+                      },
                     ),
                   ),
                   const SizedBox(
