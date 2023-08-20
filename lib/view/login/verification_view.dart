@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_project/common_widget/line_textfield.dart';
+import 'package:flutter_shop_project/view/login/select_location_view.dart';
 
 import '../../common/color_extension.dart';
 
@@ -57,7 +58,7 @@ class _VerificationViewState extends State<VerificationView> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     LineTextField(
@@ -81,7 +82,32 @@ class _VerificationViewState extends State<VerificationView> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                        )
+                        ),
+                        InkWell(
+                          borderRadius: BorderRadius.circular(30),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const SelectLocationView()),
+                            );
+                          },
+                          child: Container(
+                            width: 60,
+                            height: 60,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: TColor.primary,
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: Image.asset(
+                              'assets/img/next.png',
+                              width: 20,
+                              height: 20,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
